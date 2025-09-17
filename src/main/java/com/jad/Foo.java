@@ -11,7 +11,7 @@ public class Foo {
 
     private Qux qux = new Qux();
 
-    private Corge corge = null;
+    private Corge corge;
 
     private List<Grault> graults = new ArrayList<>();
 
@@ -23,8 +23,8 @@ public class Foo {
         this.bazs.add(baz);
     }
 
-    public void addGrault(Grault grault){
-        this.graults.add(grault);
+    public void addGrault(){
+        this.graults.add(new Grault(this));
     }
 
     public void setCorge(Corge corge) {
